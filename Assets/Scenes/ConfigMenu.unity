@@ -629,8 +629,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.37, y: 73.75}
-  m_SizeDelta: {x: 113, y: 75.3}
+  m_AnchoredPosition: {x: 6.21, y: 74}
+  m_SizeDelta: {x: 131.9, y: 74.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1456061740
 MonoBehaviour:
@@ -713,7 +713,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1456061740}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 591727553}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+        m_MethodName: ToggleInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1742990229
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60.8, y: 70.34}
+  m_AnchoredPosition: {x: 0.84, y: 70.34}
   m_SizeDelta: {x: 80.6, y: 45.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742990231
@@ -795,7 +807,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1742990232}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 591727553}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+        m_MethodName: ToggleInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1742990232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +869,7 @@ GameObject:
   - component: {fileID: 1763853102}
   - component: {fileID: 1763853104}
   - component: {fileID: 1763853103}
+  - component: {fileID: 1763853105}
   m_Layer: 0
   m_Name: Input Mode Label
   m_TagString: Untagged
@@ -868,7 +893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.6, y: -10.04}
+  m_AnchoredPosition: {x: 2.79, y: -10.04}
   m_SizeDelta: {x: 160, y: 34.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763853103
@@ -899,7 +924,7 @@ MonoBehaviour:
     m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
@@ -913,6 +938,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763853101}
   m_CullTransparentMesh: 1
+--- !u!114 &1763853105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763853101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.48, y: -1.89}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1935436375
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +965,7 @@ GameObject:
   - component: {fileID: 1935436379}
   - component: {fileID: 1935436378}
   - component: {fileID: 1935436377}
+  - component: {fileID: 1935436380}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1045,3 +1086,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935436375}
   m_CullTransparentMesh: 1
+--- !u!114 &1935436380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935436375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -2.11, y: -1.1}
+  m_UseGraphicAlpha: 1

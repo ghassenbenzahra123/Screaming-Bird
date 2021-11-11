@@ -11,6 +11,7 @@ public class Bird : MonoBehaviour
     // Start is called before the first frame update
     public GameObject ReplayBtn;
     public GameObject MenuButton;
+    private bool isDead;
 
     public Score scoreText;
     private AudioSource[] birdSounds;
@@ -42,7 +43,7 @@ public class Bird : MonoBehaviour
 
         rb= GetComponent<Rigidbody2D>();
 
-        voiceSensitivity = 0.50f;
+        voiceSensitivity = 0.2f;
         if(Microphone.devices.Length > 0)
         {
             //initializing scripting
@@ -57,7 +58,7 @@ public class Bird : MonoBehaviour
     void Update()
     {
 
-        if (!SettingsController.inputMode) {
+        if (!SettingsController.inputMode && !isDead ) {
         int dec = 128;
 		float[] waveData = new float[dec];
 		int micPosition = Microphone.GetPosition(null) - (dec + 1); // null means the first microphone
@@ -77,7 +78,7 @@ public class Bird : MonoBehaviour
 
         if (level > voiceSensitivity && !flapped)
         {
-            rb.velocity = Vector2.up * speed/1.5f;
+            rb.velocity = Vector2.up * speed;
             flapSound.Play ();
             flapped = true;
         }
@@ -104,7 +105,8 @@ public class Bird : MonoBehaviour
         if ( collision.gameObject.CompareTag("Ground") ||
         collision.gameObject.CompareTag("Pipe")
         )
-        {
+        {           isDead = true;
+
             Time.timeScale = 0;
             deadSound.Play();
 
